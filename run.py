@@ -80,7 +80,7 @@ def random_number_selector():
     else:
         print("sorry you lost...\n")
     
-    print(f'The winning number is {numbers_combined}')
+    print(f'The winning number is {numbers_combined}\n')
 
     return numbers_combined
 
@@ -97,15 +97,15 @@ def the_bank():
         if player_choice == red:
             stake = stake * 2
             bank = stake + bank
-            print(f'You won {stake} credits! current bank balance is now {bank}')
+            print(f'You won {stake} credits! current bank balance is now {bank}\n')
         elif player_choice == black:
             stake = stake * 2
             bank = stake + bank 
-            print(f'You won {stake} credits! current bank balance is now {bank}')
+            print(f'You won {stake} credits! current bank balance is now {bank}\n')
         elif player_choice == green:
             stake = stake * 35
             bank = stake + bank
-            print(f'You won {stake} credits! current bank balance is now {bank}')
+            print(f'You won {stake} credits! current bank balance is now {bank}\n')
     else:
         bank = bank - stake
         print(f'You lost {stake} and your current bank balance is {bank}\n')
@@ -113,9 +113,18 @@ def the_bank():
     return bank
 
 
+def bank_empty():
+    global bank
+
+    if bank == 0:
+        print("Sorry you are out of credit...")
+        time.sleep(2)
+        exit()
+
+
 def exit_function():
 
-    exit_input = input("Type: 'y' if you want to continue, else type: 'n': ")
+    exit_input = input("Type: 'y' if you want to continue, else type: 'n': \n")
 
     if exit_input.lower() == "n":
         exit()
@@ -130,6 +139,7 @@ def main():
     taking_stake()
     random_number_selector()
     the_bank()
+    bank_empty()
     exit_function()
 
 start_game_func()
