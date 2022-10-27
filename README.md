@@ -45,3 +45,20 @@ the final page
 - if the user is out of money the game ends automaticly
 - the end page will display the amount of money that is won or the money thats been loss
 
+## Potential future events
+- Add more bets that can be played
+- add more interactive elements
+- add an interface with an roulette board
+
+## Validating the code
+
+The validation of the code has been made through web based python validators and manually
+- web based pep8 validator 
+- manually in terminal, writing wrong inputs to see what happpens etc
+- githubs automatical error and code check
+
+## This python program was deployd through Code Institutes mock terminal using Heroku
+### Step by step deployment
+
+
+
