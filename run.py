@@ -14,11 +14,11 @@ def start_game_func():
     global stake
     global bank
     print("Welcome to the python roulette game!\n")
-    print("The odds for all the colors are: Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
+    print("The odds for all the colors are:\n Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
 
 
 
-def Choice_of_color():
+def choice_of_color():
     """
     function that makes an input for the user to chose their color they want to bet on.
     """
@@ -40,7 +40,7 @@ def Choice_of_color():
         print("Green is your choice\n")
     else:
         print("pick beetween red, black and green")
-        Choice_of_color()
+        choice_of_color()
     
     print(f'Your numbers is: {player_choice}\n')
     return player_choice
@@ -109,20 +109,28 @@ def the_bank():
     else:
         bank = bank - stake
         print(f'You lost {stake} and your current bank balance is {bank}\n')
+    
     return bank
 
 
+def exit_function():
+
+    exit_input = input("Type 'no' if you want to exit, else type 'yes'")
+
+    if exit_input.lower() == "no":
+        exit()
+    else:
+        main()
 
 
 
 
-#def losing_the_bet
-
-
-#def main()
+def main():
+    choice_of_color()
+    taking_stake()
+    random_number_selector()
+    the_bank()
+    exit_function()
 
 start_game_func()
-Choice_of_color()
-taking_stake()
-random_number_selector()
-the_bank()
+main()
