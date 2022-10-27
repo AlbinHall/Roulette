@@ -115,9 +115,9 @@ def the_bank():
 
 def exit_function():
 
-    exit_input = input("Type 'no' if you want to exit, else type 'yes'")
+    exit_input = input("Type: 'y' if you want to continue, else type: 'n': ")
 
-    if exit_input.lower() == "no":
+    if exit_input.lower() == "n":
         exit()
     else:
         main()
