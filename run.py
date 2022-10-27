@@ -7,6 +7,15 @@ green = [0]
 player_choice = ""
 bank = 500
 numbers_combined = 36
+stake = 0
+
+
+def start_game_func():
+    global stake
+
+    stake = int(input("How much do you want to bet?"))
+
+
 def Choice_of_color():
     """
     function that makes an input for the user to chose their color they want to bet on.
@@ -15,8 +24,8 @@ def Choice_of_color():
     global red
     global black
     global green
-
-    input_color = input("Choose your color: ").lower()
+    
+    input_color = input("Choose your color: \n").lower()
 
     if input_color == "red":
         player_choice = red
@@ -49,14 +58,26 @@ def random_number_selector():
         print("You won!\n")
     else:
         print("sorry you lost...\n")
-
+    
     print(f'The winning number is {numbers_combined}')
+    return numbers_combined
 
 
-#def the_bank():
+def the_bank():
+    global bank
+
+    if numbers_combined in player_choice:
+        if player_choice == red:
+            stake = stake * 2
+            bank = stake + bank
+        elif player_choice == black:
+            stake = stake * 2
+            bank = stake + bank 
+        elif player_choice == green:
+            stake = stake * 35
+            bank = stake + bank
 
 
-#def calculate_the_stake():
 
 
 #def losing_the_bet
