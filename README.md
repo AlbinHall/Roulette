@@ -1,31 +1,47 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Python Roulette Game
 
-Welcome AlbinHall,
+## The roulette game
+The main purpose with the code/game was to make an easy to play game with interactions such as placing bets and the choice of color. The game is based of the original roulette found inside casinos and maintains the original structure with red as odd, black as even and green as 0.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## This is how the deployd version looks like
 
-## Reminders
+place for image when deployd.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## How to play the game
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The game offers the player few but crucial choises.
+- Pick the color that you want to play
+ - The different colors offer different odds
+- place your bet
+- start the roulette machine
+- if you have money left in the bank, play again or stop by typing y/n
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## The starting interface
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![picture of the start interface of the game](images/startGame.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+when starting the game this is what you will se
+- chose your color between red, black and green
+- The input will give an error message if the input is something else
 
-Connect your GitHub repository and deploy as normal.
+![chosing color](images/choseColor.png)
 
-## Constraints
+## Place your stake
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![picture displaying the screen when the user can place bet](images/placeBet.png)
 
------
-Happy coding!
+This is what the user will se when proceding after the color chose
+- place a bet that is smaller then what you have in your bank
+- if the user try to type in more than what the user have in the bank they will get an error
+- the red and black gives you doubble your money and green gives you 35 times the money
+
+## The final display
+
+![the final page](images/placeBet.png)
+
+the final page
+- In the final page the user can chose to continue or end the game
+- if the user is out of money the game ends automaticly
+- the end page will display the amount of money that is won or the money thats been loss
+
