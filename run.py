@@ -101,15 +101,15 @@ def the_bank():
 
     if numbers_combined in player_choice:
         if player_choice == red:
-            stake = stake * 2
+            stake = stake * 2 - stake
             bank = stake + bank
             print(f'You won {stake} credits! current bank balance is now {bank}\n')
         elif player_choice == black:
-            stake = stake * 2
+            stake = stake * 2 - stake
             bank = stake + bank 
             print(f'You won {stake} credits! current bank balance is now {bank}\n')
         elif player_choice == green:
-            stake = stake * 35
+            stake = stake * 35 - stake
             bank = stake + bank
             print(f'You won {stake} credits! current bank balance is now {bank}\n')
     else:
