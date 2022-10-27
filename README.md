@@ -59,6 +59,14 @@ The validation of the code has been made through web based python validators and
 - manually in terminal, writing wrong inputs to see what happpens etc
 - githubs automatical error and code check
 
+## bugs
+- the game crash if user type float or string into stake
+- the calculating of profit and adding to bank not appearing in terminal
+
+## fixed bugs
+- fixed so that the stake input gives a error message if input = float or string 
+- changed the if statement to "in" instead of == 
+
 ## This python program was deployd through Code Institutes mock terminal using Heroku
 ### Step by step deployment
 
