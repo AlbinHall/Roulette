@@ -29,7 +29,7 @@ def choice_of_color():
     global black
     global green
     
-    input_color = input("Choose your color: \n").lower()
+    input_color = input("Choose your color:\n").lower()
 
     if input_color == "red":
         player_choice = red
@@ -56,10 +56,10 @@ def taking_stake():
     global stake
 
     print(f'Your current saldo is {bank}')
-    stake = int(input("How much do you want to bet?: \n"))
+    stake = int(input("How much do you want to bet?:\n"))
 
     if stake <= bank:
-        print(f'you played {stake} credits on {player_choice}')
+        print(f'you played {stake} credits on {player_choice}\n')
     else:
         print("You can't bet more money then you own...\n")
         taking_stake()
@@ -131,7 +131,7 @@ def exit_function():
     """
     Function that gives the user an option to close the game after each time playing
     """
-    exit_input = input("Type: 'y' if you want to continue, else type: 'n': \n")
+    exit_input = input("Type: 'y' if you want to continue, else type: 'n':\n")
 
     if exit_input.lower() == "n":
         exit()

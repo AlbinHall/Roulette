@@ -3,6 +3,8 @@
 ## The roulette game
 The main purpose with the code/game was to make an easy to play game with interactions such as placing bets and the choice of color. The game is based of the original roulette found inside casinos and maintains the original structure with red as odd, black as even and green as 0.
 
+[link to website](https://python-roulette.herokuapp.com/)
+
 ## This is how the deployd version looks like
 
 place for image when deployd.
