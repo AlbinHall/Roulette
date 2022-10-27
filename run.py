@@ -48,7 +48,7 @@ def Choice_of_color():
 
 def taking_stake():
     """
-    takes the bet that the player wants to do 
+    takes the bet that the player wants to play
     """
     global bank
     global stake
@@ -91,21 +91,27 @@ def the_bank():
     """
     global bank
     global stake
+    global numbers_combined
 
     if numbers_combined in player_choice:
         if player_choice == red:
             stake = stake * 2
             bank = stake + bank
+            print(f'You won {stake} credits! current bank balance is now {bank}')
         elif player_choice == black:
             stake = stake * 2
             bank = stake + bank 
+            print(f'You won {stake} credits! current bank balance is now {bank}')
         elif player_choice == green:
             stake = stake * 35
             bank = stake + bank
-        else:
-            bank =  bank - stake
-            print(f'You lost {stake} and your current bank balance is {bank}')
-        return bank
+            print(f'You won {stake} credits! current bank balance is now {bank}')
+    else:
+        bank = bank - stake
+        print(f'You lost {stake} and your current bank balance is {bank}\n')
+    return bank
+
+
 
 
 
@@ -116,7 +122,7 @@ def the_bank():
 #def main()
 
 start_game_func()
-taking_stake()
 Choice_of_color()
+taking_stake()
 random_number_selector()
 the_bank()
