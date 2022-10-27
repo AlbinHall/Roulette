@@ -55,15 +55,19 @@ def taking_stake():
     global bank
     global stake
 
-    print(f'Your current saldo is {bank}')
-    stake = int(input("How much do you want to bet?:\n"))
+    print(f'Your current balance is {bank}')
 
-    if stake <= bank:
-        print(f'you played {stake} credits on {player_choice}\n')
-    else:
-        print("You can't bet more money then you own...\n")
-        taking_stake()
-    
+    while True:
+        try:
+            stake = int(input("How much do you want to bet?:\n"))
+            if stake <= bank:
+                print(f'you played {stake} credits on {player_choice}\n')
+            else:
+                print("You can't bet more money then you own...\n")
+                taking_stake()
+            break
+        except ValueError:
+            print("You need to type an whole number\n")
     return stake 
 
 
