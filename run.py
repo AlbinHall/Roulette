@@ -13,8 +13,8 @@ stake = 0
 def start_game_func():
     global stake
     global bank
-    input("Welcome to the python roulette game!\n")
-    input("The odds for all the colors are: Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
+    print("Welcome to the python roulette game!\n")
+    print("The odds for all the colors are: Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
 
 
 
@@ -46,6 +46,25 @@ def Choice_of_color():
     return player_choice
 
 
+def taking_stake():
+    """
+    takes the bet that the player wants to do 
+    """
+    global bank
+    global stake
+
+    print(f'Your current saldo is {bank}')
+    stake = int(input("How much do you want to bet?: \n"))
+
+    if stake <= bank:
+        print(f'you played {stake} credits on {player_choice}')
+    else:
+        print("You can't bet more money then you own...\n")
+        taking_stake()
+    
+    return stake 
+
+
 def random_number_selector():
     """
     function that returns and makes the choice of random number
@@ -62,25 +81,8 @@ def random_number_selector():
         print("sorry you lost...\n")
     
     print(f'The winning number is {numbers_combined}')
+
     return numbers_combined
-
-
-def taking_stake():
-    """
-    takes the bet that the player wants to do 
-    """
-    global bank
-    global stake
-
-    Print(f'Your current saldo is {bank}')
-    stake = int(input("How much do you want to bet?: \n"))
-
-    if stake <= bank:
-        print(f'you played {stake} credits on {player_choice}')
-    else:
-        print("You can't bet more money then you own...\n")
-    
-    return stake 
 
 
 def the_bank():
@@ -113,5 +115,8 @@ def the_bank():
 
 #def main()
 
-player_start_game = Choice_of_color()
+start_game_func()
+taking_stake()
+Choice_of_color()
 random_number_selector()
+the_bank()
