@@ -11,8 +11,10 @@ stake = 0
 
 
 def start_game_func():
-    global stake
-    global bank
+    """
+    funtion that welcomes the player into the game
+    """
+
     print("Welcome to the python roulette game!\n")
     print("The odds for all the colors are:\n Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
 
@@ -114,6 +116,9 @@ def the_bank():
 
 
 def bank_empty():
+    """
+    function that notice if the bank is = 0 and if True closes the game so the user will have to start over
+    """
     global bank
 
     if bank == 0:
@@ -123,7 +128,9 @@ def bank_empty():
 
 
 def exit_function():
-
+    """
+    Function that gives the user an option to close the game after each time playing
+    """
     exit_input = input("Type: 'y' if you want to continue, else type: 'n': \n")
 
     if exit_input.lower() == "n":
@@ -135,6 +142,9 @@ def exit_function():
 
 
 def main():
+    """
+    containing all the functions except the start game function
+    """
     choice_of_color()
     taking_stake()
     random_number_selector()
