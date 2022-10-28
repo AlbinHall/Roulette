@@ -16,7 +16,10 @@ def start_game_func():
     """
 
     print("Welcome to the python roulette game!\n")
-    print("The odds for all the colors are:\n Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
+    print("You play the game by chosing a color you want to play\n")
+    print(f'Red: {red}\nBlack: {black}\nGreen: {green}\n')
+    print("After you have picked a color to play on you can place your bet\n")
+    print("The odds for all the colors are:\nRed = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
 
 
 def choice_of_color():
@@ -33,17 +36,19 @@ def choice_of_color():
     if input_color == "red":
         player_choice = red
         print("Red is your choice\n")
+        print(f'Your numbers is: {player_choice}\n')
     elif input_color == "black":
         player_choice = black
         print("Black is your choice\n")
+        print(f'Your numbers is: {player_choice}\n')
     elif input_color == "green":
         player_choice = green
         print("Green is your choice\n")
+        print(f'Your numbers is: {player_choice}\n')
     else:
-        print("pick beetween red, black and green")
+        print("pick beetween red, black and green\n")
         choice_of_color()
     
-    print(f'Your numbers is: {player_choice}\n')
     return player_choice
 
 

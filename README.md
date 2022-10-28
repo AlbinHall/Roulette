@@ -62,10 +62,12 @@ The validation of the code has been made through web based python validators and
 ## bugs
 - the game crash if user type float or string into stake
 - the calculating of profit and adding to bank not appearing in terminal
+- when user input not valid in color chose it returns dubble when user put in valid choice later on
 
 ## fixed bugs
 - fixed so that the stake input gives a error message if input = float or string 
 - changed the if statement to "in" instead of == 
+- fixed dubble message in color input by a change of location of the print statement
 
 ## This python program was deployd through Code Institutes mock terminal using Heroku
 ### Step by step deployment
