@@ -19,7 +19,6 @@ def start_game_func():
     print("The odds for all the colors are:\n Red = 2x the money\nBlack = 2x the money\nGreen = 35x the money\n")
 
 
-
 def choice_of_color():
     """
     function that makes an input for the user to chose their color they want to bet on.
@@ -28,7 +27,7 @@ def choice_of_color():
     global red
     global black
     global green
-    
+
     input_color = input("Choose your color:\n").lower()
 
     if input_color == "red":
@@ -68,7 +67,7 @@ def taking_stake():
             break
         except ValueError:
             print("You need to type an whole number\n")
-    return stake 
+    return stake
 
 
 def random_number_selector():
@@ -143,8 +142,6 @@ def exit_function():
         main()
 
 
-
-
 def main():
     """
     containing all the functions except the start game function
@@ -155,6 +152,7 @@ def main():
     the_bank()
     bank_empty()
     exit_function()
+
 
 start_game_func()
 main()

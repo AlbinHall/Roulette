@@ -69,6 +69,9 @@ The validation of the code has been made through web based python validators and
 
 ## This python program was deployd through Code Institutes mock terminal using Heroku
 ### Step by step deployment
+- created a new app in heroku
+- made the deployment through heroku plus github
+- the deployment is manuall
 
 
 
